@@ -31,8 +31,7 @@ output$graphplace <- renderPlotly({
     graphobj<-ggplot(data=graphdata(), 
                  aes(x=academic_year, 
                      y=yaxis, 
-                     fill=primary_disagg_subgroup, 
-                     tooltip=tool
+                     fill=primary_disagg_subgroup
                       )) +
             facet_wrap(~gender_disagg_subgroup)+
             theme(axis.title.x=element_blank())+
