@@ -21,9 +21,7 @@ SEAgraphmodServer <- function(id, graphdata) {
           c("#")}
 
       })
-      suppressedgraphdata <-reactive({
-        graphdata() %>% subset(count > 9)
-      })
+  
       
       output$graphplace <- renderPlotly({
         

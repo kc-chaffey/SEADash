@@ -13,11 +13,7 @@ SEAgengraphmodServer <- function(id, graphdata) {
   moduleServer(
     id,
     function(input, output, session) {
-      
-      graphdatatip <- reactive({
-      graphdata() %>% 
-          mutate(tool = paste(academic_year, "\n", primary_disagg_subgroup, "\n", ylab, "\n", dilab))
-      })
+   
       
       yaxislab <-reactive({
         if(grepl("%", graphdata()$ylab[1], fixed=TRUE)) {
@@ -32,7 +28,7 @@ SEAgengraphmodServer <- function(id, graphdata) {
 output$graphplace <- renderPlotly({
       
         
-    graphobj<-ggplot(data=graphdatatip(), 
+    graphobj<-ggplot(data=graphdata(), 
                  aes(x=academic_year, 
                      y=yaxis, 
                      fill=primary_disagg_subgroup, 
