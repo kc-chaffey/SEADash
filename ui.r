@@ -8,7 +8,7 @@ ui <- dashboardPage(
     fluidRow(
       column(width=3, style = "padding:0px;",
              box(title="Description", width=12, 
-                 p("This dashboard summarizes 2012-2021 student and equity achievement data for the college. Columns marked with an asterisk indicate observed disproportionate impact.")
+                 p("This dashboard summarizes 2012-2021 student equity and achievement data for the college. Columns marked with an asterisk indicate observed disproportionate impact.")
                  ),
              box(title="Output Controls", width=12,    
               pickerInput(
