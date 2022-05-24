@@ -12,21 +12,20 @@ library(plotly)
 library(ggplot2)
 library(shinymanager)
 library(ggiraph)
-source("SEAgraphmod.R", local=TRUE)
-source("SEAgengraphmod.R", local=TRUE)
-##LOAD YOUR DATA HERE
+source("SEAgraphmod.R", local = TRUE)
+source("SEAgengraphmod.R", local = TRUE)
+## LOAD YOUR DATA HERE
 SEAdata <- read.csv("seatabdata.csv")
 ##
 
 
 SEAprimarylist <- SEAdata %>%
-  filter(primary_disagg!="Overall") %>% 
-  pull(primary_disagg) %>% 
-  unique() %>% 
+  filter(primary_disagg != "Overall") %>%
+  pull(primary_disagg) %>%
+  unique() %>%
   sort()
 
 SEAmetriclist <- SEAdata %>%
-  pull(metric_description) %>% 
-  unique() %>% 
+  pull(metric_description) %>%
+  unique() %>%
   sort()
-
